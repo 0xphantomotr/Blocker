@@ -3,6 +3,18 @@ syntax = "proto3";
 
 option go_package = "github.com/0xphantomotr/Blocker/proto";
 
+service Node {
+	rpc Handshake(Version) returns (Version);
+	rpc HandleTransaction(Transaction) returns(Ack);
+}
+
+message Version {
+	string version = 1;
+	int32 height = 2;
+}
+
+message Ack{}
+
 message Block {
 	Header header = 1;
 	repeated Transaction transactions = 2;
