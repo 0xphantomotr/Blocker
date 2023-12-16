@@ -2,7 +2,7 @@ build:
 	@go build -o bin/Blocker
 
 run: build
-	@./bin/docker
+	@./bin/Blocker
 
 test:
 	@go test -v ./...
