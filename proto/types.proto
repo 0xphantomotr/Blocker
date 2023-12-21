@@ -12,6 +12,7 @@ message Version {
 	string version = 1;
 	int32 height = 2;
 	string listenAddr = 3;
+	repeated string peerList = 4;
 }
 
 message Ack{}
